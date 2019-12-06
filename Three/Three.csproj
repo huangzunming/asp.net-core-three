@@ -31,8 +31,17 @@
   <ItemGroup>
     <Content Remove="View\Home\Index.cshtml" />
     <Content Remove="wwwroot\css\bootstrap.min.css" />
+    <Content Remove="Properties\launchSettings.json" />
+    <Content Remove="Properties\launchSettings.json" />
   </ItemGroup>
   <ItemGroup>
     <None Include="wwwroot\css\bootstrap.min.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Update="Properties\launchSettings.json">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
   </ItemGroup>
 </Project>
