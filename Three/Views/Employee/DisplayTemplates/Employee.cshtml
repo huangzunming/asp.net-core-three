@@ -1,0 +1,14 @@
+﻿@using Three.Model
+@model Employee
+<tr>
+    <td>@Model.SurnName</td>
+    <td>@Model.FullName</td>
+    <td>@Model.Gender</td>
+    <td>@(Model.Fired ? "是" : "")</td>
+    <td>
+        @if (!Model.Fired)
+        {
+            <a asp-action="Fired" asp-route-employeeId="@Model.Id">Fire</a>
+        }
+    </td>
+</tr>

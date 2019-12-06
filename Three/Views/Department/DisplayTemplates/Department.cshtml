@@ -1,0 +1,9 @@
+﻿@model Three.Model.Department
+<tr>
+    <td>@Model.DepartentName</td>
+    <td>@Model.Introduction</td>
+    <td>@Model.EmployeeCount</td>
+    <td>
+        <a asp-controller="Employee" asp-action="Index" asp-route-departmentId="@Model.Id">Employees</a>
+    </td>
+</tr>

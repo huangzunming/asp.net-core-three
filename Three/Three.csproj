@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Custom' ">
+    <StartAction>Project</StartAction>
+    <ApplicationURL>https://localhost:5001;http://localhost:5000</ApplicationURL>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Views\" />
+    <Folder Include="Views\Home\" />
+    <Folder Include="Views\Shared\" />
+    <Folder Include="Model\" />
+    <Folder Include="Servers\" />
+    <Folder Include="Views\Department\" />
+    <Folder Include="lib\" />
+    <Folder Include="lib\js\" />
+    <Folder Include="wwwroot\" />
+    <Folder Include="wwwroot\css\" />
+    <Folder Include="Views\Department\DisplayTemplates\" />
+    <Folder Include="Views\Employee\" />
+    <Folder Include="Views\Employee\DisplayTemplates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="HomeController.cs" />
+    <Compile Remove="Servers\IDepartent.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="View\Home\Index.cshtml" />
+    <Content Remove="wwwroot\css\bootstrap.min.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\css\bootstrap.min.css" />
+  </ItemGroup>
+</Project>
